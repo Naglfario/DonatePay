@@ -6,9 +6,9 @@ using FluentAssertions;
 namespace DonatePay.Tests
 {
     /// <summary>
-    /// Если между двумя тест-кейсами будет недостаточная задержка по времени,
-    /// то от DonatePay придёт код 429 и тест провалится.
-    /// Поэтому установлен TestProiority и есть задержка в 15 секунд.
+    /// Р•СЃР»Рё РјРµР¶РґСѓ РґРІСѓРјСЏ С‚РµСЃС‚-РєРµР№СЃР°РјРё Р±СѓРґРµС‚ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅР°СЏ Р·Р°РґРµСЂР¶РєР° РїРѕ РІСЂРµРјРµРЅРё,
+    /// С‚Рѕ РѕС‚ DonatePay РїСЂРёРґС‘С‚ РєРѕРґ 429 Рё С‚РµСЃС‚ РїСЂРѕРІР°Р»РёС‚СЃСЏ.
+    /// РџРѕСЌС‚РѕРјСѓ СѓСЃС‚Р°РЅРѕРІР»РµРЅ TestProiority Рё РµСЃС‚СЊ Р·Р°РґРµСЂР¶РєР° РІ 15 СЃРµРєСѓРЅРґ.
     /// </summary>
     [TestCaseOrderer(
     ordererTypeName: "DonatePay.Tests.Infrastructure.PriorityOrderer",
@@ -30,7 +30,7 @@ namespace DonatePay.Tests
             Thread.Sleep(15000);
         }
 
-        [Fact(DisplayName = "1. Успешная попытка создать фейковое оповещение"), TestPriority(0)]
+        [Fact(DisplayName = "1. РЈСЃРїРµС€РЅР°СЏ РїРѕРїС‹С‚РєР° СЃРѕР·РґР°С‚СЊ С„РµР№РєРѕРІРѕРµ РѕРїРѕРІРµС‰РµРЅРёРµ"), TestPriority(0)]
         public async void CreateFakeTransaction()
         {
             var response = await _client.CreateNotification();
@@ -41,7 +41,7 @@ namespace DonatePay.Tests
             response?.Message?.Length.Should().BeGreaterThan(0);
         }
 
-        [Fact(DisplayName = "2. Успешная попытка запросить профиль"), TestPriority(1)]
+        [Fact(DisplayName = "2. РЈСЃРїРµС€РЅР°СЏ РїРѕРїС‹С‚РєР° Р·Р°РїСЂРѕСЃРёС‚СЊ РїСЂРѕС„РёР»СЊ"), TestPriority(1)]
         public async void GetUserTest()
         {
             var userResponse =  await _client.GetUserAsync();
@@ -53,7 +53,7 @@ namespace DonatePay.Tests
             userResponse?.User?.Balance.Should().BeGreaterThanOrEqualTo(0);
         }
 
-        [Fact(DisplayName = "3. Успешная попытка запросить список транзакций"), TestPriority(2)]
+        [Fact(DisplayName = "3. РЈСЃРїРµС€РЅР°СЏ РїРѕРїС‹С‚РєР° Р·Р°РїСЂРѕСЃРёС‚СЊ СЃРїРёСЃРѕРє С‚СЂР°РЅР·Р°РєС†РёР№"), TestPriority(2)]
         public async void GetTransactionsTest()
         {
             var transResponse = await _client.GetTransactions(_transFilter);
@@ -65,7 +65,7 @@ namespace DonatePay.Tests
             transResponse.Transactions.Should().HaveCountLessThanOrEqualTo(_transFilter.Limit);
         }
 
-        [Fact(DisplayName = "4. Успешная попытка запросить список оповещений"), TestPriority(3)]
+        [Fact(DisplayName = "4. РЈСЃРїРµС€РЅР°СЏ РїРѕРїС‹С‚РєР° Р·Р°РїСЂРѕСЃРёС‚СЊ СЃРїРёСЃРѕРє РѕРїРѕРІРµС‰РµРЅРёР№"), TestPriority(3)]
         public async void GetNotificationsTest()
         {
             var transResponse = await _client.GetNotifications(_getNotiFilter);
