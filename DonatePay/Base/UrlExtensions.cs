@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DonatePay.Base
 {
-    public static class DonatePayUrlExtensions
+    public static class UrlExtensions
     {
         public static string AsUrlParams(this object obj)
         {

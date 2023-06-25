@@ -48,7 +48,6 @@ namespace DonatePay
                     Comment = _fixture.Create<string>(),
                     Name = _fixture.Create<string>().Substring(0, 16),
                     Date = DateTime.Now,
-                    Notification = _fixture.Create<bool>(),
                     Sum = _fixture.Create<decimal>(),
                 };
             }
@@ -73,7 +72,7 @@ namespace DonatePay
         public async Task<TransactionsResponse> GetTransactions(TransactionsFilter filter = null)
         {
             if(filter == null) filter = new TransactionsFilter();
-            string urlParams = filter.AsUrlParams();
+            string urlParams = filter.ToString();
             var response = await Get<TransactionsResponse>(_transUrl + urlParams);
             response.Transactions?.HtmlDecode();
             return response;

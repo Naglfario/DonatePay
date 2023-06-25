@@ -16,5 +16,10 @@ namespace DonatePay.Base.Models.Request
         /// User - Пользовательская [Тестовые пожертвования]
         /// </summary>
         public TransactionStatus? Status { get; set; }
+
+        public override string ToString()
+        {
+            return this.AsUrlParams();
+        }
     }
 }
