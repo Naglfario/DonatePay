@@ -9,7 +9,11 @@
 
 P.S. I think 100% DonatePay audience understands Russian language, but if i'm wrong — let me know in issues and i'll translate this page to English.
 
-## Examples
+## Get Started
+
+Библиотека доступна в виде [nuget-пакета.](https://www.nuget.org/packages/DonatePay/)
+
+`Install-Package DonatePay`
 
 ### User (Profile)
 ```c#
