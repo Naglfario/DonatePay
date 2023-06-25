@@ -13,7 +13,7 @@ namespace DonatePay.Base.Models.Request
             get { return limit; }
             set
             {
-                if (value < 25) value = 25;
+                if (value < 1) value = 1;
                 else if (value > 100) value = 100;
                 limit = value;
             }
