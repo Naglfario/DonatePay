@@ -1,5 +1,6 @@
-﻿using DonatePay.Base.Models.Enums;
+﻿using DonatePay.Base.Enums;
 using Newtonsoft.Json;
+using System;
 
 namespace DonatePay.Base.Models
 {

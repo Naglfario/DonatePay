@@ -1,6 +1,7 @@
-﻿namespace DonatePay.Base.Models.Response;
-
-public class CreateNotificationResponse : ResponseBase
+﻿namespace DonatePay.Base.Models.Response
 {
-    public string Message { get; set; }
+    public class CreateNotificationResponse : ResponseBase
+    {
+        public string Message { get; set; }
+    }
 }

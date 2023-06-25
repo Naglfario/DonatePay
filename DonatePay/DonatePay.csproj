@@ -1,14 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- where should the nuget package be created at -->
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+
+    <!-- nuget related properties -->
+    <Authors>Naglfar</Authors>
+    <Description>Library for access to DonatePay.ru in .NET — get your profile, transactions, notifications and create a fake notifications.</Description>
+    <Version>1.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Naglfario/DonatePay</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageIconUrl>https://raw.githubusercontent.com/Naglfario/DonatePay/master/favicon.png</PackageIconUrl>
+    <PackageIcon>favicon.png</PackageIcon>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.18.0" />
-    <PackageReference Include="Centrifugo.AspNetCore" Version="1.0.16" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <None Include="favicon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

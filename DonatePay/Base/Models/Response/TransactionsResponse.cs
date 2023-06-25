@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
-namespace DonatePay.Base.Models.Response;
+using System.Collections.Generic;
 
-public class TransactionsResponse : ResponseBase
+namespace DonatePay.Base.Models.Response
 {
-    [JsonProperty("data")]
-    public List<DonatePayTransaction>? Transactions { get; set; }
+    public class TransactionsResponse : ResponseBase
+    {
+        [JsonProperty("data")]
+        public List<DonatePayTransaction> Transactions { get; set; }
+    }
 }

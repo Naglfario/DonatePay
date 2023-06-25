@@ -1,7 +1,13 @@
-﻿namespace DonatePay.Base.Models.Response;
+﻿using Newtonsoft.Json;
+using System;
 
-public class ResponseBase
+namespace DonatePay.Base.Models.Response
 {
-    public string Status { get; set; }
-    public DateTime Time { get; set; }
+    public class ResponseBase
+    {
+        public string Status { get; set; }
+        public DateTime? Time { get; set; }
+        [JsonProperty("jqXHR")]
+        public ResponseError Error { get; set; }
+    }
 }

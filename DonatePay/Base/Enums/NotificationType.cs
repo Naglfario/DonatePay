@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DonatePay.Base.Models.Enums
+namespace DonatePay.Base.Enums
 {
     public enum NotificationType
     {
