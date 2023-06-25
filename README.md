@@ -1,5 +1,9 @@
 ﻿# DonatePayClient
 
+![Текущая версия](https://img.shields.io/badge/version-1.0.0-blue)
+![% строк покрытых тестами](https://img.shields.io/badge/line_coverage-84.58%25-green)
+![% методов покрытых тестами](https://img.shields.io/badge/method_coverage-91.50%25-green)
+
 Эта библиотека предназначена для лёгкого взаимодействия с [API DonatePay](https://donatepay.ru/page/api) через .NET 
 (.Net Core & .Net Framework & .Net Standart ofc). С помощью этой либы вы сможете:
 
