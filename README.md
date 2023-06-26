@@ -1,8 +1,9 @@
 ﻿# DonatePayClient
 
-![Текущая версия](https://img.shields.io/badge/version-1.0.0-blue)
+[![Ссылка на nuget](https://img.shields.io/badge/nuget-1.0.0-blue)](https://www.nuget.org/packages/DonatePay/)
 ![% строк покрытых тестами](https://img.shields.io/badge/line_coverage-84.58%25-green)
 ![% методов покрытых тестами](https://img.shields.io/badge/method_coverage-91.50%25-green)
+[![Задонатить мне](https://img.shields.io/badge/my-donatepay-red)](https://new.donatepay.ru/@naglfario)
 
 Эта библиотека предназначена для лёгкого взаимодействия с [API DonatePay](https://donatepay.ru/page/api) через .NET 
 (.Net Core & .Net Framework & .Net Standart ofc). С помощью этой либы вы сможете:
@@ -12,6 +13,10 @@
 3. Получать список транзакций и уведомлений, в том числе указывая фильтры(критерии для поиска)
 
 P.S. I think 100% DonatePay audience understands Russian language, but if i'm wrong — let me know in issues and i'll translate this page to English.
+
+## Say "Thanks"
+
+Если библиотека оказалась полезной для тебя, и возникло острое желание задонатить, это возможно. Вот [моя ссылка](https://new.donatepay.ru/@naglfario) на DonatePay. Все собранные деньги пойдут на Dr.Pepper.
 
 ## Get Started
 
